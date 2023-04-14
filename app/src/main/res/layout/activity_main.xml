@@ -10,6 +10,7 @@
     <com.google.android.material.card.MaterialCardView
         android:layout_width="300dp"
         android:layout_height="400dp"
+        android:layout_gravity="center_horizontal"
         android:clickable="true">
 
         <LinearLayout
@@ -17,17 +18,32 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <ImageView
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:src="@drawable/italiana" />
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/italiana" />
+
+                <ImageView
+                    android:id="@+id/imgShare"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="right"
+                    android:layout_margin="10sp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/baseline_share" />
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:text="Pesto pasta"
-
                 android:textSize="20sp" />
 
             <TextView
@@ -35,7 +51,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5sp"
                 android:layout_marginBottom="10sp"
-
                 android:text="$15 " />
 
             <TextView
